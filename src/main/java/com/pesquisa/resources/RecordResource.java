@@ -39,6 +39,7 @@ public class RecordResource {
 			@RequestParam(value = "linesPerPage", defaultValue = "0") Integer linesPerPage,
 			@RequestParam(value = "orderBy", defaultValue = "moment") String orderBy,
 			@RequestParam(value = "direction", defaultValue = "DESC") String direction)	{
+		
 		Instant minDate = ("".equals(min))? null : Instant.parse(min);
 		Instant maxDate = ("".equals(max))? null : Instant.parse(max);
 		
